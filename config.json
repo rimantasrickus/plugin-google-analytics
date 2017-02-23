@@ -1,0 +1,9 @@
+[
+    {
+        "tab"       : "Settings",
+        "key"       : "trackingId",
+        "label"     : "Google Analytics Tracking-ID",
+        "type"      : "text",
+        "default"   : ""
+    }
+]

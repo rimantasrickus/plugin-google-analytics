@@ -1,0 +1,30 @@
+{
+    "version"           : "1.0.0",
+    "name"              : "GoogleAnalytics",
+    "license"           : "AGPL-3.0",
+    "pluginIcon"        : "icon_plugin_xs.png",
+    "price"             : 0.00,
+    "description"       : "Provides Google Analytics tracking for plentymarkets webshops",
+    "shortDescription"  : {"de": "Google Analytics Tracking für plentymarkets Webshops","en": "Provides Google Analytics tracking for plentymarkets webshops"},
+    "author"            : "plentymarkets GmbH",
+    "authorIcon"        : "icon_author_xs.png",
+    "email"             : "sales@plentymarkets.com",
+    "phone"             : "+49 561 98 681 100",
+
+    "keywords"          : ["plentymarkets", "plugins", "layout", "template", "google", "analytics", "tracking"],
+    "type"              : "template",
+    "require"           : [],
+    "namespace"         : "GoogleAnalytics",
+    "serviceProvider"   : "GoogleAnalytics\\Providers\\GoogleAnalyticsServiceProvider",
+    "javaScriptFiles"   : [],
+    "containers"        : [],
+    "dataProviders": [
+        {
+            "key"           :"GoogleAnalytics\\Providers\\TrackingCodeProvider",
+            "name"          :"Google Analytics tracking code",
+            "description"   :"Include Google Analytics tracking code snippet"
+        }
+    ],
+    "dependencies"      : [],
+    "runOnBuild"        : []
+}
