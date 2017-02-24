@@ -1,4 +1,4 @@
-# Release Notes für Google Analytics Plugin
+# Release Notes für GoogleAnalytics
 
 ## v1.0.0 (2017-02-24)
 

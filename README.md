@@ -1,6 +1,6 @@
 ![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
 
-# Google Analytics Plugin
+# GoogleAnalytics
 
 This is the official **Google Analytics** plugin developed by plentymarkets.
 
