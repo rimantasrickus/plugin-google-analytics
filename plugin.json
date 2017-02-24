@@ -7,6 +7,7 @@
     "license"           : "AGPL-3.0",
     "price"             : 0.00,
     "authorIcon"        : "icon_author_xs.png",
+    "pluginIcon"        : "icon_plugin_xs.png",
     "email"             : "sales@plentymarkets.com",
     "phone"             : "+49 561 98 681 100",
     "keywords"          : ["plentymarkets", "plugins", "layout", "template", "google", "analytics", "tracking"],
