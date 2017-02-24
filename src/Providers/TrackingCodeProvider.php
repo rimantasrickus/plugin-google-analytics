@@ -13,9 +13,9 @@ use Plenty\Plugin\Templates\Twig;
 
 class TrackingCodeProvider
 {
-    public function call( Twig $twig, CustomerService $customerService )
+    public function call( Twig $twig )
     {
 
-        return $twig->render('GoogleAnalytics::GoogleAnalyticsTrackingCode', ['data' => $customerService->getLatestOrder()]);
+        return $twig->render('GoogleAnalytics::GoogleAnalyticsTrackingCode');
     }
 }
