@@ -2,9 +2,48 @@
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
 
     ga('create', '{{ config("GoogleAnalytics.trackingId") }}', 'auto');
+    ga('require', 'ecommerce');
     ga('send', 'pageview');
 
+    {% set shippingCosts = 0 %}
+    {% set webstoreConfig = services.webstoreConfig.getWebstoreConfig() %}
+    {% set useGross = config("GoogleAnalytics.submitGrossPrices") == "true" %}
+
+    {% if services.template.getCurrentTemplate() == 'tpl.confirmation' %}
+        {% for item in data.order.orderItems %}
+            {% if item.typeId == 1 %}
+                ga('ecommerce:addItem', {
+                    'id'        : '{{ data.order.id }}',
+                    'name'      : '{{ item.orderItemName }}',
+                    'sku'       : '{{ item.variation.number }}',
+                    'price'     : '{% if useGross %}{{ item.amounts[0].priceGross }}{% else %}{{ item.amounts[0].priceNet }}{% endif %}',
+                    'quantity'  : '{{ item.quantity }}',
+                    'currency'  : '{{ item.amounts[0].currency }}'
+                });
+            {% endif %}
+
+            {% if item.typeId == 6 %}
+                {% if useGross %}
+                    {% set shippingCosts = shippingCosts + item.amounts[0].priceGross %}
+                {% else %}
+                    {% set shippingCosts = shippingCosts + item.amounts[0].priceNet %}
+                {% endif %}
+            {% endif %}
+
+        {% endfor %}
+
+        ga('ecommerce:addTransaction', {
+            'id'            : '{{ data.order.id }}',
+            'affiliation'   : '{{ webstoreConfig.name }}',
+            'revenue'       : '{% if useGross %}{{ data.order.amounts[0].grossTotal }}{% else %}{{ data.order.amounts[0].netTotal }}{% endif %}',
+            'shipping'      : '{{ shippingCosts }}',
+            'tax'           : '{{ data.order.amounts[0].vatTotal }}',
+            'currency'      : '{{ data.order.amounts[0].currency }}'
+        });
+
+        ga('ecommerce:send');
+    {% endif %}
 </script>

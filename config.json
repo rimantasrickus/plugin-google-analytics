@@ -5,5 +5,12 @@
         "label"     : "Google Analytics Tracking-ID",
         "type"      : "text",
         "default"   : ""
+    },
+    {
+        "tab"       : "Settings",
+        "key"       : "submitGrossPrices",
+        "label"     : "Send gross prices to google analytics",
+        "type"      : "checkbox",
+        "default"   : "true"
     }
 ]
