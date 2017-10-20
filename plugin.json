@@ -2,7 +2,7 @@
     "name"              : "GoogleAnalytics",
     "namespace"         : "GoogleAnalytics",
     "type"              : "template",
-    "version"           : "1.0.0",
+    "version"           : "1.0.1",
     "license"           : "AGPL-3.0",
     "price"             : 0.00,
     "description"       : "Provides Google Analytics tracking for plentymarkets webshops",
