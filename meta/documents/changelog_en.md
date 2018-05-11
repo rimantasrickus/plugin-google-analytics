@@ -1,11 +1,17 @@
 # Release Notes for GoogleAnalytics
 
+
+## v1.0.2 (2018-05-11)
+### Features
+- Configuration for anonymising IPs
+
+
 ## v1.0.1 (2017-10-20)
-### Behoben
+### Fix
 - Transactions and items are sent correctly to google analytics
 
-## v1.0.0 (2017-02-24)
 
+## v1.0.0 (2017-02-24)
 ### Features
 - Tracking of page views
 - Tracking of orders including transactions and order items
