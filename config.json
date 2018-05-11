@@ -12,5 +12,12 @@
         "label"     : "Send gross prices to google analytics",
         "type"      : "checkbox",
         "default"   : "true"
+    },
+    {
+        "tab"       : "Settings",
+        "key"       : "anonymizeIPs",
+        "label"     : "Anonymize IPs",
+        "type"      : "checkbox",
+        "default"   : "true"
     }
 ]
