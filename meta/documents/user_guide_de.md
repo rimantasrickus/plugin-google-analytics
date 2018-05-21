@@ -8,3 +8,5 @@ Durch die Auswahl des Containers können Sie bestimmen, welche Seiten durch das 
 Die enstprechende Einstellungen finden Sie in den Plugin-Optionen Ihres Layout-Plugins unter dem Tab "Content".
 Für **Ceres** empfiehlt sich der Container "**Template.Style**".
 3. Wählen Sie über die Checkbox **Anonymize IPs** aus, ob IPs anonymisiert an Google übergeben werden sollen. Diese Option ist standardmäßig aktiv.
+4. Wenn sie eine Opt-out Möglichkeit für Google Analytics anbieten möchten, besuchen sie im Backend unter **CMS -> Container-Verknüpfüng** eine Verknüpfung für den Datencontainer "Google Analytics opt out (GoogleAnalytics)
+" hier können sie unteranderem den Container "Static Pages: Privacy Policy" wählen.
