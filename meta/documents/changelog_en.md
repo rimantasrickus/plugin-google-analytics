@@ -1,5 +1,8 @@
 # Release Notes for GoogleAnalytics
 
+## v1.0.3 (2018-05-22)
+### Features
+- Opt-out option for Google Analytics
 
 ## v1.0.2 (2018-05-11)
 ### Features

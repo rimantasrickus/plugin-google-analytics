@@ -7,3 +7,7 @@
 By choosing the layout container you can influence which pages will be tracked by this plugin.
 If you are using **Ceres** for your webshop layout, we recommend to assign this plugin to the provided container "**Template.Style**".
 3. The checkbox **Anonymize IPs** determines, whether IPs are transmitted to Google in an anonymised fashion. This option is active by default.
+4. If you want to offer an opt-out option for Google Analytics, you can open the **CMS » Container links** menu and create a container link for the data container **Google Analytics opt out (Google Analytics)**. Here, you can select, for instance, the container **Static Pages: Privacy Policy**.
+
+
+Wenn sie eine Opt-out Möglichkeit für Google Analytics anbieten möchten, wählen Sie im Backend unter **CMS » Container-Verknüpfungen** eine Verknüpfung für den Datencontainer **Google Analytics opt out (Google Analytics)**. Hier können Sie unter anderem den Container "Static Pages: Privacy Policy" wählen.
