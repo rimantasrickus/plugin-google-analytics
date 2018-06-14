@@ -1,5 +1,9 @@
 # Release Notes for GoogleAnalytics
 
+## v1.0.4 (2018-06-14)
+### Fix
+- Failure when setting cookie. It is solved.
+
 ## v1.0.3 (2018-05-23)
 ### Features
 - Opt-out option for Google Analytics
