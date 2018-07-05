@@ -1,5 +1,9 @@
 # Release Notes for GoogleAnalytics
 
+## v1.0.5 (2018-07-05)
+### Behoben
+- There was an JavaScript error. It is solved.
+
 ## v1.0.4 (2018-06-14)
 ### Fix
 - Failure when setting cookie. It is solved.
