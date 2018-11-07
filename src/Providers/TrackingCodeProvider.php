@@ -2,12 +2,7 @@
 
 namespace GoogleAnalytics\Providers;
 
-use IO\Services\CustomerService;
-use IO\Services\OrderService;
-use Plenty\Modules\Basket\Contracts\BasketRepositoryContract;
-use Plenty\Modules\Basket\Models\Basket;
-use Plenty\Modules\Frontend\Services\AccountService;
-use Plenty\Plugin\ConfigRepository;
+use Plenty\Modules\Frontend\Session\Storage\Contracts\FrontendSessionStorageFactoryContract;
 use Plenty\Plugin\Templates\Twig;
 
 
@@ -15,7 +10,14 @@ class TrackingCodeProvider
 {
     public function call( Twig $twig )
     {
+        /** @var FrontendSessionStorageFactoryContract $sessionStorage */
+        $sessionStorage = pluginApp(FrontendSessionStorageFactoryContract::class);
 
-        return $twig->render('GoogleAnalytics::GoogleAnalyticsTrackingCode');
+        return $twig->render(
+            'GoogleAnalytics::GoogleAnalyticsTrackingCode',
+            [
+                'trackOrder' => $sessionStorage->getPlugin()->getValue('GA_TRACK_ORDER') === 1
+            ]
+        );
     }
 }

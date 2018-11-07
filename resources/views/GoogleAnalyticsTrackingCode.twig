@@ -35,7 +35,7 @@
     {% set webstoreConfig = services.webstoreConfig.getWebstoreConfig() %}
     {% set useGross = config("GoogleAnalytics.submitGrossPrices") == "true" %}
     
-    {% if services.template.getCurrentTemplate() == 'tpl.confirmation' %}
+    {% if trackOrder %}
         {% set data = services.customer.getLatestOrder() %}
 
         {# Calculate shipping costs #}
