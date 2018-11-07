@@ -2,12 +2,9 @@
 
 namespace GoogleAnalytics\Providers;
 
-use IO\Extensions\TwigIOExtension;
-use IO\Extensions\TwigServiceProvider;
-use IO\Services\ItemLoader\Contracts\ItemLoaderFactory;
-use IO\Services\ItemLoader\Extensions\TwigLoaderPresets;
-use IO\Services\ItemLoader\Factories\ItemLoaderFactoryES;
-use IO\Services\NotificationService;
+use Plenty\Modules\Frontend\Session\Storage\Contracts\FrontendSessionStorageFactoryContract;
+use Plenty\Modules\Order\Events\OrderCreated;
+use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 
@@ -27,8 +24,15 @@ class GoogleAnalyticsServiceProvider extends ServiceProvider
     /**
      * boot twig extensions and services
      * @param Twig $twig
+     * @param Dispatcher $dispatcher
      */
-    public function boot(Twig $twig)
+    public function boot(Twig $twig, Dispatcher $dispatcher)
     {
+        $dispatcher->listen(OrderCreated::class, function($event)
+        {
+            /** @var FrontendSessionStorageFactoryContract $sessionStorage */
+            $sessionStorage = pluginApp(FrontendSessionStorageFactoryContract::class);
+            $sessionStorage->getPlugin()->setValue('GA_TRACK_ORDER', 1);
+        }, 0);
     }
 }

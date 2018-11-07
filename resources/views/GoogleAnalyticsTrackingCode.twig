@@ -35,57 +35,58 @@
     {% set webstoreConfig = services.webstoreConfig.getWebstoreConfig() %}
     {% set useGross = config("GoogleAnalytics.submitGrossPrices") == "true" %}
     
-    {% if services.template.getCurrentTemplate() == 'tpl.confirmation' %}
+    {% if trackOrder %}
         {% set data = services.customer.getLatestOrder() %}
+        {% if data is defined %}
+            {# Calculate shipping costs #}
+            {% for item in data.order.orderItems %}
 
-        {# Calculate shipping costs #}
-        {% for item in data.order.orderItems %}
-
-            {% if item.typeId == 6 %}
-                {% if useGross %}
-                    {% set shippingCosts = shippingCosts + item.amounts[0].priceGross %}
-                {% else %}
-                    {% set shippingCosts = shippingCosts + item.amounts[0].priceNet %}
+                {% if item.typeId == 6 %}
+                    {% if useGross %}
+                        {% set shippingCosts = shippingCosts + item.amounts[0].priceGross %}
+                    {% else %}
+                        {% set shippingCosts = shippingCosts + item.amounts[0].priceNet %}
+                    {% endif %}
                 {% endif %}
-            {% endif %}
 
-        {% endfor %}
+            {% endfor %}
 
-        {# Add transaction #}
-        ga('ecommerce:addTransaction', {
-            'id'            : '{{ data.order.id }}',
-            'affiliation'   : '{{ webstoreConfig.name }}',
-            'revenue'       : '{% if useGross %}{{ data.order.amounts[0].grossTotal }}{% else %}{{ data.order.amounts[0].netTotal }}{% endif %}',
-            'shipping'      : '{{ shippingCosts }}',
-            'tax'           : '{{ data.order.amounts[0].vatTotal }}',
-            'currency'      : '{{ data.order.amounts[0].currency }}'
-        });
+            {# Add transaction #}
+            ga('ecommerce:addTransaction', {
+                'id'            : '{{ data.order.id }}',
+                'affiliation'   : '{{ webstoreConfig.name }}',
+                'revenue'       : '{% if useGross %}{{ data.order.amounts[0].grossTotal }}{% else %}{{ data.order.amounts[0].netTotal }}{% endif %}',
+                'shipping'      : '{{ shippingCosts }}',
+                'tax'           : '{{ data.order.amounts[0].vatTotal }}',
+                'currency'      : '{{ data.order.amounts[0].currency }}'
+            });
 
-        {# Add items to transaction #}
-        {% for item in data.order.orderItems %}
-            {% if item.typeId == 1 %}
-                ga('ecommerce:addItem', {
-                    'id'        : '{{ data.order.id }}',
-                    'name'      : '{{ item.orderItemName }}',
-                    'sku'       : '{{ item.variation.number }}',
-                    'price'     : '{% if useGross %}{{ item.amounts[0].priceGross }}{% else %}{{ item.amounts[0].priceNet }}{% endif %}',
-                    'quantity'  : '{{ item.quantity }}',
-                    'currency'  : '{{ item.amounts[0].currency }}'
-                });
-            {% endif %}
-
-            {% if item.typeId == 6 %}
-                {% if useGross %}
-                    {% set shippingCosts = shippingCosts + item.amounts[0].priceGross %}
-                {% else %}
-                    {% set shippingCosts = shippingCosts + item.amounts[0].priceNet %}
+            {# Add items to transaction #}
+            {% for item in data.order.orderItems %}
+                {% if item.typeId == 1 %}
+                    ga('ecommerce:addItem', {
+                        'id'        : '{{ data.order.id }}',
+                        'name'      : '{{ item.orderItemName }}',
+                        'sku'       : '{{ item.variation.number }}',
+                        'price'     : '{% if useGross %}{{ item.amounts[0].priceGross }}{% else %}{{ item.amounts[0].priceNet }}{% endif %}',
+                        'quantity'  : '{{ item.quantity }}',
+                        'currency'  : '{{ item.amounts[0].currency }}'
+                    });
                 {% endif %}
-            {% endif %}
 
-        {% endfor %}
+                {% if item.typeId == 6 %}
+                    {% if useGross %}
+                        {% set shippingCosts = shippingCosts + item.amounts[0].priceGross %}
+                    {% else %}
+                        {% set shippingCosts = shippingCosts + item.amounts[0].priceNet %}
+                    {% endif %}
+                {% endif %}
+
+            {% endfor %}
 
 
 
-        ga('ecommerce:send');
+            ga('ecommerce:send');
+        {% endif %}
     {% endif %}
 </script>
