@@ -13,10 +13,14 @@ class TrackingCodeProvider
         /** @var FrontendSessionStorageFactoryContract $sessionStorage */
         $sessionStorage = pluginApp(FrontendSessionStorageFactoryContract::class);
 
+        $enableTracking = $sessionStorage->getPlugin()->getValue('GA_TRACK_ORDER') === 1;
+
+        $sessionStorage->getPlugin()->unsetKey('GA_TRACK_ORDER');
+
         return $twig->render(
             'GoogleAnalytics::GoogleAnalyticsTrackingCode',
             [
-                'trackOrder' => $sessionStorage->getPlugin()->getValue('GA_TRACK_ORDER') === 1
+                'trackOrder' => $enableTracking
             ]
         );
     }

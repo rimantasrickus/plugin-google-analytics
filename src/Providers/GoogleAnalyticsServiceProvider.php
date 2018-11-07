@@ -2,7 +2,6 @@
 
 namespace GoogleAnalytics\Providers;
 
-use GoogleAnalytics\Middlewares\GoogleAnalyticsMiddleware;
 use Plenty\Modules\Frontend\Session\Storage\Contracts\FrontendSessionStorageFactoryContract;
 use Plenty\Modules\Order\Events\OrderCreated;
 use Plenty\Plugin\Events\Dispatcher;
@@ -20,7 +19,6 @@ class GoogleAnalyticsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->addGlobalMiddleware(GoogleAnalyticsMiddleware::class);
     }
 
     /**
