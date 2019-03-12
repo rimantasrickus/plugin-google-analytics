@@ -1,8 +1,12 @@
 # Release Notes für GoogleAnalytics
 
+## v1.0.6 (2018-03-12)
+### Behoben
+- Aufträge werden nur noch einmalig an Google Analytics übermittelt.
+
 ## v1.0.5 (2018-07-05)
 ### Behoben
-- Es hab ein JavaScript Fehler. Das Verhalten wurde behoben.
+- Es gab einen JavaScript-Fehler. Das Verhalten wurde behoben.
 
 ## v1.0.4 (2018-06-14)
 ### Behoben
