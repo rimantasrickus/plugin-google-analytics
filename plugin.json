@@ -8,7 +8,7 @@
     "description"       : "Provides Google Analytics tracking for plentymarkets webshops",
     "shortDescription"  : {"de": "Google Analytics Tracking für plentymarkets Webshops","en": "Provides Google Analytics tracking for plentymarkets webshops"},
     "categories"        : ["3527"],
-    "author"            : "plentymarkets GmbH",
+    "author"            : "plentysystems AG",
     "authorIcon"        : "icon_author_xs.png",
     "pluginIcon"        : "icon_plugin_xs.png",
     "email"             : "sales@plentymarkets.com",
