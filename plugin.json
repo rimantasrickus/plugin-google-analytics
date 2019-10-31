@@ -23,11 +23,6 @@
             "key"           :"GoogleAnalytics\\Providers\\TrackingCodeProvider",
             "name"          :"Google Analytics tracking code",
             "description"   :"Include Google Analytics tracking code snippet"
-        },
-        {
-          "key"           :"GoogleAnalytics\\Providers\\OptOutProvider",
-          "name"          :"Google Analytics opt out",
-          "description"   :"Include Google Analytics opt out code snippet"
         }
     ],
     "dependencies"      : [],
