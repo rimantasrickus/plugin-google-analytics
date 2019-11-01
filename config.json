@@ -27,7 +27,12 @@
           "options": {
             "defaultValue": "true"
           }
-        },
+        }
+      }
+    },
+    "Config.CookiesTab": {
+      "label": "Config.CookiesTab",
+      "formFields": {
         "consentGroup": {
           "type": "selectBox",
           "required": false,
