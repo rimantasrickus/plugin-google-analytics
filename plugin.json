@@ -22,7 +22,8 @@
         {
             "key"           :"GoogleAnalytics\\Providers\\TrackingCodeProvider",
             "name"          :"Google Analytics tracking code",
-            "description"   :"Include Google Analytics tracking code snippet"
+            "description"   :"Include Google Analytics tracking code snippet",
+            "defaultLayoutContainer": "Ceres::Template.Style"
         }
     ],
     "dependencies"      : [],
