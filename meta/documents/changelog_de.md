@@ -1,5 +1,9 @@
 # Release Notes für GoogleAnalytics
 
+## v1.1.0 (2019-12-03)
+### Geändert
+- Die von Google Analytics verwendeten Cookies werden an der Consent-Schnittstelle für Ceres-Shops registriert.
+
 ## v1.0.6 (2018-03-12)
 ### Behoben
 - Aufträge werden nur noch einmalig an Google Analytics übermittelt.
