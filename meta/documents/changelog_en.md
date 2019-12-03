@@ -1,5 +1,9 @@
 # Release Notes for GoogleAnalytics
 
+## v1.1.0 (2019-12-03)
+### Changes
+- Cookies used by Google Analytics are registered with the consent interface for Ceres online stores.
+
 ## v1.0.6 (2018-03-12)
 ### Fix
 - Orders will only be submitted once to Google analytics.
