@@ -23,23 +23,23 @@ class GoogleAnalyticsServiceProvider extends ServiceProvider
     {
         /** @var ConsentRepositoryContract $consentRepository */
         $consentRepository = pluginApp(ConsentRepositoryContract::class);
-
-        /** @var ConfigRepository $config */
-        $config = pluginApp(ConfigRepository::class);
-
         $consentRepository->registerConsent(
             'googleAnalytics',
             'GoogleAnalytics::GoogleAnalytics.consentLabel',
-            [
-                'description' => 'GoogleAnalytics::GoogleAnalytics.consentDescription',
-                'provider' => 'GoogleAnalytics::GoogleAnalytics.consentProvider',
-                'lifespan' => 'GoogleAnalytics::GoogleAnalytics.consentLifespan',
-                'policyUrl' => 'GoogleAnalytics::GoogleAnalytics.consentPolicyUrl',
-                'group' => $config->get('GoogleAnalytics.consentGroup', 'tracking'),
-                'necessary' => $config->get('GoogleAnalytics.consentNecessary') === 'true',
-                'isOptOut' => $config->get('GoogleAnalytics.consentOptOut') === 'true',
-                'cookieNames' => ['_ga', '_gid', '_gat']
-            ]
+            function() {
+                /** @var ConfigRepository $config */
+                $config = pluginApp(ConfigRepository::class);
+                return  [
+                    'description' => 'GoogleAnalytics::GoogleAnalytics.consentDescription',
+                    'provider' => 'GoogleAnalytics::GoogleAnalytics.consentProvider',
+                    'lifespan' => 'GoogleAnalytics::GoogleAnalytics.consentLifespan',
+                    'policyUrl' => 'GoogleAnalytics::GoogleAnalytics.consentPolicyUrl',
+                    'group' => $config->get('GoogleAnalytics.consentGroup', 'tracking'),
+                    'necessary' => $config->get('GoogleAnalytics.consentNecessary') === 'true',
+                    'isOptOut' => $config->get('GoogleAnalytics.consentOptOut') === 'true',
+                    'cookieNames' => ['_ga', '_gid', '_gat']
+                ];
+            }
         );
     }
 
