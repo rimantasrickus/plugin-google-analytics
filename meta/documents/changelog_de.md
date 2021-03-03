@@ -1,5 +1,13 @@
 # Release Notes für GoogleAnalytics
 
+## v1.1.1 (2021-03-03)
+
+### Geändert
+- Die von Google Analytics verwendeten Cookies werden jetzt per Callback Funktion registriert.
+
+### Behoben
+- Die Versandkosten werden nicht mehr als zusätzliche Artikelposition übermittelt.
+
 ## v1.1.0 (2019-12-03)
 ### Geändert
 - Die von Google Analytics verwendeten Cookies werden an der Consent-Schnittstelle für Ceres-Shops registriert.
