@@ -6,7 +6,7 @@ This is the official **Google Analytics** plugin developed by plentymarkets.
 
 ## Requirements
 
-This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). The [IO](https://github.com/plentymarkets/plugin-io) plugin is required to run the plugin.
+This is a plugin for [plentymarkets](https://www.plentymarkets.com). The [IO](https://github.com/plentymarkets/plugin-io) plugin is required to run the plugin.
 
 ## Installing
 
