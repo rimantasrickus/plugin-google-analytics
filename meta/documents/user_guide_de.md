@@ -8,3 +8,9 @@ Durch die Auswahl des Containers können Sie bestimmen, welche Seiten durch das 
 Die enstprechende Einstellungen finden Sie in den Plugin-Optionen Ihres Layout-Plugins unter dem Tab "Content".
 Für **plentyShop LTS** empfiehlt sich der Container "**Template.Style**".
 3. Über die Checkbox **Anonymize IPs** wählen Sie aus, ob IPs anonymisiert an Google übergeben werden sollen. Diese Option ist standardmäßig aktiv.
+
+## Problembehandlung
+
+<div class="alert alert-warning" role="alert">
+    Wenn du einen Ad-Blocker in deinem Browser verwendest, kann es zu Problemen bei der Bedienung des Plugins kommen. Dadurch ist es möglicherweise nicht möglich, das Plugin zu installieren, löschen, aktivieren oder deaktivieren. Solltest du bei diesen Aktionen Probleme haben, schalte deinen Ad-Blocker aus oder setze plentymarkets auf die Whitelist.
+</div>
