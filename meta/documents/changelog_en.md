@@ -1,5 +1,11 @@
 # Release Notes for GoogleAnalytics
 
+## v1.1.3 (2021-11-03)
+
+### Changes
+- Updated user guide
+- plentyShop rebranding
+
 ## v1.1.1 (2021-03-03)
 
 ### Changes
