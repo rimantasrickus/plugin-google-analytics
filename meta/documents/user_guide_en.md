@@ -7,6 +7,12 @@
 If you are using **plentyShop LTS** for your online store layout, we recommend to assign this plugin to the provided container **Template.Style**.
 3. The checkbox **Anonymize IPs** determines, whether IPs are transmitted to Google in an anonymised fashion. This option is active by default.
 
+## Richtlinie zur Einwilligung der Nutzer in der EU
+
+<div class="alert alert-warning" role="alert">
+    Bei der Verwendung von Google Analytics sind sie verpflichtet über Art der Verwendung der Daten zu informieren. Beachte beachten Sie dafür unseren <a href="#">Best Practice</a>.
+</div>
+
 ## Troubleshooting
 
 <div class="alert alert-warning" role="alert">

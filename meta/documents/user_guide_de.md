@@ -9,6 +9,12 @@ Die enstprechende Einstellungen finden Sie in den Plugin-Optionen Ihres Layout-P
 Für **plentyShop LTS** empfiehlt sich der Container "**Template.Style**".
 3. Über die Checkbox **Anonymize IPs** wählen Sie aus, ob IPs anonymisiert an Google übergeben werden sollen. Diese Option ist standardmäßig aktiv.
 
+## Richtlinie zur Einwilligung der Nutzer in der EU
+
+<div class="alert alert-warning" role="alert">
+    Bei der Verwendung von Google Analytics sind sie verpflichtet über Art der Verwendung der Daten zu informieren. Beachte beachten Sie dafür unseren <a href="#">Best Practice</a>.
+</div>
+
 ## Problembehandlung
 
 <div class="alert alert-warning" role="alert">
