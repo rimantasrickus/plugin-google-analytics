@@ -12,7 +12,8 @@ Für **plentyShop LTS** empfiehlt sich der Container "**Template.Style**".
 ## Richtlinie zur Einwilligung der Nutzer in der EU
 
 <div class="alert alert-warning" role="alert">
-    Bei der Verwendung von Google Analytics sind sie verpflichtet über Art der Verwendung der Daten zu informieren. Beachte beachten Sie dafür unseren <a href="#">Best Practice</a>.
+    Bei der Verwendung von Google Analytics sind Sie verpflichtet, über Art der Verwendung der Daten zu informieren. 
+    Wir weisen darauf hin, dass beim Einsatz von Diensten, die personenbezogene Daten in ein Drittland (z.B.: USA) übermitteln, die Voraussetzungen der         zulässigen Datenübermittlung nach Art. 44 ff DSGVO vorliegen müssen. Dies ist beispielsweise der Fall, wenn Google Analytics eingesetzt wird.
 </div>
 
 ## Problembehandlung
