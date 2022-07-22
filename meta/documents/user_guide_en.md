@@ -10,7 +10,7 @@ If you are using **plentyShop LTS** for your online store layout, we recommend t
 ## Richtlinie zur Einwilligung der Nutzer in der EU
 
 <div class="alert alert-warning" role="alert">
-    Bei der Verwendung von Google Analytics sind sie verpflichtet über Art der Verwendung der Daten zu informieren. Beachte beachten Sie dafür unseren <a href="#">Best Practice</a>.
+ When using Google Analytics, you are obliged to inform visitors about the type of use of the data. We would like to point out that when using services that transfer personal data to a third country (e.g. USA), the conditions for permissible data transfer according to Art. 44 ff GDPR must be met. This is the case, for example, when Google Analytics is used.      
 </div>
 
 ## Troubleshooting
