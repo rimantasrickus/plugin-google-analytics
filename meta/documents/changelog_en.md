@@ -1,9 +1,10 @@
 # Release Notes for GoogleAnalytics
 
-## v1.1.4 (2022-25-06)
+## v1.1.4 (2022-25-07)
 
 ### Changes
 - Cookie information adjusted and legal notice added.
+- Added flag for PHP compatibility. 
 
 ## v1.1.3 (2021-11-03)
 
