@@ -1,5 +1,10 @@
 # Release Notes for GoogleAnalytics
 
+## v1.1.4 (2022-25-06)
+
+### Changes
+- Cookie information adjusted and legal notice added.
+
 ## v1.1.3 (2021-11-03)
 
 ### Changes
