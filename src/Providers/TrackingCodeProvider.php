@@ -3,6 +3,7 @@
 namespace GoogleAnalytics\Providers;
 
 use Plenty\Modules\Frontend\Session\Storage\Contracts\FrontendSessionStorageFactoryContract;
+use Plenty\Plugin\Log\LoggerFactory;
 use Plenty\Plugin\Templates\Twig;
 
 class TrackingCodeProvider
